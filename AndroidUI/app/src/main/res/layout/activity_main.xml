@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView android:id="@+id/menuText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="64sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:text="MAIN MENU" />
+    <Button android:id="@+id/btnLinearHoriz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        android:text="@string/main_link_1" />
+    <Button android:id="@+id/btnLinearVert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        android:text="@string/main_link_2" />
+    <Button android:id="@+id/btnGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:text="@string/main_link_3" />
+    <Button
+        android:id="@+id/btnRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/colorAccent"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:text="@string/main_link_4" />
+</LinearLayout>

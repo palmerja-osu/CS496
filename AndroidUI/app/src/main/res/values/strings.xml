@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Android UI</string>
+    <string name="main_link_1">Horizontal Linear View</string>
+    <string name="main_link_2">Vertical Linear View</string>
+    <string name="main_link_3">Grid View</string>
+    <string name="main_link_4">Relative Layout View</string>
+    <string name="add_number_1">Add Number</string>
+    <string name="add_number_horizontal_1">Add Number Here</string>
+    <string name="add_number_first_1">1</string>
+    <string name="add_word_vertical_1">Write Here</string>
+    <string name="add_word_button_1">Add Word to List</string>
+    <string name="change_word_button">Change Word</string>
+    <string name="change_number_button">Change Number</string>
+    <string name="add_word_button_2">Add Word to Drop Down</string>
+    <string name="add_word_first_1">First Word</string>
+    <string name="close">CLOSE</string>
+    <string-array name="spinner_array">
+        <item>None</item>
+    </string-array>
+    <string-array name="linear_array">
+        <item>First</item>
+    </string-array>
+</resources>

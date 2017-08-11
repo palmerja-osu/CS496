@@ -1,0 +1,29 @@
+<!-- Author: James Palmer -->
+<!-- Date: 7/21/2017 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OAuth 2.0 Assignment</title>
+	<title>496 Summer 2017</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="text-center">OAuth 2.0 Demo Results</h1>
+                <h3 class="text-center">Hey <strong>{{firstName}} {{lastName}}</strong>! We used the state variable <strong>{{state}}</strong> to get your first name, last name and your Google+ information. Click the link below to connect your Google+ page. </h3>
+				<form action="{{url}}" method="get">
+                    <input type="submit" class="btn btn-primary btn-lg btn-block" id="auth_button" value="{{url}}">
+                </form>
+
+			</div>
+    	</div>
+    </div>
+</body>
+</html>

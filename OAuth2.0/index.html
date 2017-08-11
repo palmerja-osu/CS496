@@ -1,0 +1,81 @@
+<html lang="en">
+    <head>
+        <title>OAuth 2.0 TAKE 2</title>
+        <meta name="description" content="">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    </head>
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <span class="mdl-layout-title">OAuth 2.0 TAKE 2</span>
+                </div>
+            </header>
+
+            <main class="mdl-layout__content">
+                <div class="page-content" style="display: flex; flex-direction: column; align-items: center; padding: 10px 0;">
+                    <div class="mdl-card mdl-shadow--4dp">
+                        <div class="mdl-card__supporting-text">
+                            This app will take you to the google authentication system  view your email and some other public info contained in email permission. It will print that public information out to the screen after it has been authorized.
+
+                            <oauth-app show-link></oauth-app>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script>
+            class OAuthAppComponent extends HTMLElement {
+                static get observedAttributes() {
+                    return ['show-link'];
+                }
+                constructor() {
+                    super();
+                    this.template = this.attachShadow({mode: 'open'});
+                    this.render();
+                }
+                attributeChangedCallback(attributeName, oldValue, newValue, namespace) {
+                    console.log(`${attributeName} changed from ${oldValue} to ${newValue}`);
+                    this.render();
+                }
+                render() {
+                    const link = this.hasAttribute('show-link') ? "<oauth-link></oauth-link>" : "";
+                    this.template.innerHTML = `
+                        <div style="display: flex; flex-direction: column;">${link}</div>
+                    `;
+                }
+            }
+            class OAuthLinkComponent extends HTMLElement {
+                constructor() {
+                    super();
+                    this.template = this.attachShadow({mode: 'open'});
+                }
+                connectedCallback() {
+                    if (!("fetch" in window)) {
+                        alert("Your browser does not support the 'fetch' API.");
+                    }
+                    fetch('/state')
+                        .then(response => response.json())
+                        .then((data) => {
+                            this.oauthState = data['oauthState'];
+                            this.render();
+                        });
+                }
+                render() {
+                    this.template.innerHTML = `
+                        <a href="https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=220231227847-fabrd2a3ogrstjha4ugl60626qp76vmb.apps.googleusercontent.com&redirect_uri=https://${window.location.host}/oauth&scope=email&state=${this.oauthState}">
+                            Click here to authenticate
+                        </a>
+                        <div>Current State variable: <b>${this.oauthState}</b></div>
+                    `;
+                }
+            }
+            customElements.define('oauth-app', OAuthAppComponent);
+            customElements.define('oauth-link', OAuthLinkComponent);
+        </script>
+    </body>
+</html>

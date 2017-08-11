@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OAuthApp</string>
+    <string name="title_activity_auth_complete">AuthComplete</string>
+    <string name="post_to_goog">Post to Google</string>
+    <string name="get_posts">Get Posts</string>
+    <string name="write_post">Write Post Here</string>
+    <string name="post_text">My Last 3 Posts</string>
+</resources>

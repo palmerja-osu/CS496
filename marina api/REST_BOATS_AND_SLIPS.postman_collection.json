@@ -1,0 +1,2540 @@
+{
+	"variables": [],
+	"info": {
+		"name": "REST_BOATS_AND_SLIPS",
+		"_postman_id": "ea190bb7-038f-c791-bbba-c66f291042ef",
+		"description": " ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AAAAA_Setup",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Boat 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"postman.clearGlobalVariable(\"slip_id\");",
+									"postman.clearGlobalVariable(\"boat_id\");",
+									"postman.clearEnvironmentVariable(\"boat_id\");",
+									"postman.clearEnvironmentVariable(\"slip_id\");",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_id1\", data.id);",
+									"    ",
+									"",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Black Pearl\", \"type\":\"Sail Boat\", \"length\":150}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Boat 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_id2\", data.id);",
+									"    ",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Moby Dick\", \"type\":\"Whale\", \"length\":120}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Boat 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_id3\", data.id);",
+									"    ",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Custards Can\", \"type\":\"Submarine\", \"length\":75}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Boat 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_id4\", data.id);",
+									"    ",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Tax Evasion\", \"type\":\"Yacht\", \"length\":135}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Slip 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_id1\", slip_data.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 1}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Slip 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_id2\", slip_data.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 2}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Slip 3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_id3\", slip_data.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 3}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Slip 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_id4\", slip_data.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 4}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AddBoat",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Boat Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"var count = data.length;",
+									"postman.setEnvironmentVariable(\"start_count\", count);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boats",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"var idExists = data.hasOwnProperty('id');",
+									"tests[\"id exists in new Boat object\"] = idExists === true;",
+									"var boat_at_sea = data.at_sea;",
+									"tests[\"New Boat object starts at Sea\"] = boat_at_sea === true;",
+									"postman.setEnvironmentVariable(\"boat_id\", data.id);",
+									"    ",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Pablos Cigar\", \"type\":\"Speed Boat\", \"length\":25}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get New Boat Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"var count = data.length;",
+									"var start_count = postman.getEnvironmentVariable(\"start_count\");",
+									"var expected_count = parseInt(start_count) + 1;",
+									"tests[\"Count of boats increased by 1\"] = expected_count === count;",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boats",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AddSlip",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Slip Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"var count = data.length;",
+									"postman.setEnvironmentVariable(\"start_count\", count);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slips",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Slip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"var idExists = slip_data.hasOwnProperty('id');",
+									"tests[\"id exists in new Slip object\"] = idExists === true;",
+									"tests[\"Correct number exists in new Slip object\"] = slip_data.number === 4;",
+									"tests[\"Slip is empty\"] = slip_data.current_boat === null;",
+									"tests[\"Empty slip = no-arrvial date\"] = slip_data.arrival_date === null;",
+									"postman.setEnvironmentVariable(\"slip_id\", slip_data.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 4}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get New Slip Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"var start_count = postman.getEnvironmentVariable(\"start_count\");",
+									"var expected_count = parseInt(start_count) + 1;",
+									"tests[\"Count of slips increased by 1\"] = expected_count === data.length;",
+									"postman.clearGlobalVariable(\"slip_id\");",
+									"postman.clearGlobalVariable(\"boat_id\");",
+									"postman.clearEnvironmentVariable(\"boat_id\");",
+									"postman.clearEnvironmentVariable(\"slip_id\");",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slips",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ModifyBoat",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Boat to Mod",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"postman.clearEnvironmentVariable(\"boat_id\");",
+									"postman.clearEnvironmentVariable(\"slip_id\");",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_id\", data.id);",
+									"    ",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Pablos Cigar\", \"type\":\"Speed Boat\", \"length\":25}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Original Boat Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var boat_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_name\", boat_data.name);",
+									"postman.setEnvironmentVariable(\"boat_type\", boat_data.type);",
+									"postman.setEnvironmentVariable(\"boat_length\", boat_data.length);",
+									"postman.setEnvironmentVariable(\"boat_at_sea\", boat_data.at_sea);",
+									"var id = postman.getEnvironmentVariable(\"boat_id\");",
+									"tests[\"Correct boat pulled\"] = id === boat_data.id;",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var new_boat_data = JSON.parse(responseBody);",
+									"var original_name = postman.getEnvironmentVariable(\"boat_name\");",
+									"var original_type = postman.getEnvironmentVariable(\"boat_type\");",
+									"var original_length = postman.getEnvironmentVariable(\"boat_length\");",
+									"var original_at_sea = postman.getEnvironmentVariable(\"boat_at_sea\");",
+									"postman.setEnvironmentVariable(\"boat_name\", new_boat_data.name);",
+									"tests[\"Name has changed, as expected\"] = original_name !== new_boat_data.name;",
+									"tests[\"Type has not changed, as expected\"] = original_type === new_boat_data.type;",
+									"tests[\"Length has not changed, as expected\"] = original_length == new_boat_data.length;",
+									"tests[\"At Sea has not changed\"] = new_boat_data.at_sea == true;",
+									"console.log(original_at_sea);",
+									"console.log(original_length);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Jack Sparrows Other Ship\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var new_boat_data = JSON.parse(responseBody);",
+									"var original_name = postman.getEnvironmentVariable(\"boat_name\");",
+									"var original_type = postman.getEnvironmentVariable(\"boat_type\");",
+									"var original_length = postman.getEnvironmentVariable(\"boat_length\");",
+									"var original_at_sea = postman.getEnvironmentVariable(\"boat_at_sea\");",
+									"postman.setEnvironmentVariable(\"boat_type\", new_boat_data.type);",
+									"tests[\"Name has not changed as exp,ected\"] = original_name === new_boat_data.name;",
+									"tests[\"Type has changed, as expected\"] = original_type !== new_boat_data.type;",
+									"tests[\"Length has not changed, as expected\"] = original_length == new_boat_data.length;",
+									"tests[\"At Sea has not changed\"] = new_boat_data.at_sea === true;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\": \"Dinghy\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Length",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var new_boat_data = JSON.parse(responseBody);",
+									"var original_name = postman.getEnvironmentVariable(\"boat_name\");",
+									"var original_type = postman.getEnvironmentVariable(\"boat_type\");",
+									"var original_length = postman.getEnvironmentVariable(\"boat_length\");",
+									"var original_at_sea = postman.getEnvironmentVariable(\"boat_at_sea\");",
+									"postman.setEnvironmentVariable(\"boat_length\", new_boat_data.length);",
+									"tests[\"Name has not changed, as expected\"] = original_name === new_boat_data.name;",
+									"tests[\"Type has not changed, as expected\"] = original_type === new_boat_data.type;",
+									"tests[\"Length has changed, as expected\"] = original_length != new_boat_data.length;",
+									"tests[\"At Sea has not changed\"] = new_boat_data.at_sea === true;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"length\": 10}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Length and Type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var new_boat_data = JSON.parse(responseBody);",
+									"var original_name = postman.getEnvironmentVariable(\"boat_name\");",
+									"var original_type = postman.getEnvironmentVariable(\"boat_type\");",
+									"var original_length = postman.getEnvironmentVariable(\"boat_length\");",
+									"var original_at_sea = postman.getEnvironmentVariable(\"boat_at_sea\");",
+									"postman.setEnvironmentVariable(\"boat_length\", new_boat_data.length);",
+									"postman.setEnvironmentVariable(\"boat_type\", new_boat_data.type);",
+									"tests[\"Name has not changed, as expected\"] = original_name === new_boat_data.name;",
+									"tests[\"Type has changed, as expected\"] = original_type != new_boat_data.type;",
+									"tests[\"Length has changed, as expected\"] = original_length != new_boat_data.length;",
+									"tests[\"At Sea has not changed\"] = new_boat_data.at_sea === true;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\":\"row boat\",\"length\": 12}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Mod Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"postman.clearEnvironmentVariable(\"boat_id\");",
+									"postman.clearEnvironmentVariable(\"slip_id\");",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ModifySlip",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Slip to Mod",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_id\", slip_data.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 8}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Original Slip Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_number\", slip_data.number);",
+									"postman.setEnvironmentVariable(\"slip_current_boat\", slip_data.current_boat);",
+									"postman.setEnvironmentVariable(\"boat_arrival_date\", slip_data.arrival_date);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Slip Number",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var new_slip_data = JSON.parse(responseBody);",
+									"var original_number = postman.getEnvironmentVariable(\"slip_number\");",
+									"var original_current_boat = postman.getEnvironmentVariable(\"slip_current_boat\");",
+									"var original_arrival_date = postman.getEnvironmentVariable(\"boat_arrival_date\");",
+									"postman.setEnvironmentVariable(\"slip_number\", new_slip_data.number);",
+									"tests[\"Number has changed as expected\"] = original_number != new_slip_data.number;",
+									"console.log(original_current_boat);",
+									"console.log(new_slip_data.current_boat);",
+									"tests[\"Current Boat has not changed, as expected\"] = null === new_slip_data.current_boat;",
+									"tests[\"Arrival Date has not changed, as expected\"] = null === new_slip_data.arrival_date;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 13}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Slip Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var new_slip_data = JSON.parse(responseBody);",
+									"var original_number = postman.getEnvironmentVariable(\"slip_number\");",
+									"var original_current_boat = postman.getEnvironmentVariable(\"slip_current_boat\");",
+									"var original_arrival_date = postman.getEnvironmentVariable(\"boat_arrival_date\");",
+									"postman.setEnvironmentVariable(\"slip_current_boat\", new_slip_data.current_boat);",
+									"tests[\"Number has not changed, as expected\"] = original_number == new_slip_data.number;",
+									"tests[\"Current Boat has changed, as expected\"] = original_current_boat != new_slip_data.current_boat;",
+									"tests[\"Arrival Date has not changed, as expected\"] = null === new_slip_data.arrival_date;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"current_boat\": \"Not the original boat\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Slip Mod",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ReplaceBoat",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Boat to Replace",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_id\", data.id);",
+									"    ",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"New Boat\", \"type\":\"Fast Boat\", \"length\":15}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Original Boat Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var boat_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_name\", boat_data.name);",
+									"postman.setEnvironmentVariable(\"boat_type\", boat_data.type);",
+									"postman.setEnvironmentVariable(\"boat_length\", boat_data.length);",
+									"postman.setEnvironmentVariable(\"boat_at_sea\", boat_data.at_sea);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Replace Boat Name Only",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var new_boat_data = JSON.parse(responseBody);",
+									"var original_name = postman.getEnvironmentVariable(\"boat_name\");",
+									"var original_type = postman.getEnvironmentVariable(\"boat_type\");",
+									"var original_length = postman.getEnvironmentVariable(\"boat_length\");",
+									"var original_at_sea = postman.getEnvironmentVariable(\"boat_at_sea\");",
+									"postman.setEnvironmentVariable(\"boat_name\", new_boat_data.name);",
+									"tests[\"Name has changed, as expected\"] = original_name != new_boat_data.name;",
+									"tests[\"Type has changed to None, as expected\"] = new_boat_data.type === null;",
+									"tests[\"Length has changed to None, as expected\"] = new_boat_data.length === null;",
+									"tests[\"At Sea has not changed\"] = new_boat_data.at_sea === true;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"NEW BOAT NAME\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Replace Boat Name & Type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var new_boat_data = JSON.parse(responseBody);",
+									"var original_name = postman.getEnvironmentVariable(\"boat_name\");",
+									"var original_type = postman.getEnvironmentVariable(\"boat_type\");",
+									"var original_length = postman.getEnvironmentVariable(\"boat_length\");",
+									"var original_at_sea = postman.getEnvironmentVariable(\"boat_at_sea\");",
+									"postman.setEnvironmentVariable(\"boat_name\", new_boat_data.name);",
+									"postman.setEnvironmentVariable(\"boat_type\", new_boat_data.type);",
+									"tests[\"Name has changed, as expected\"] = original_name !== new_boat_data.name;",
+									"tests[\"Type has changed, as expected\"] = original_type !== new_boat_data.type;",
+									"tests[\"Length has changed to None, as expected\"] = new_boat_data.length === null;",
+									"tests[\"At Sea has not changed\"] = new_boat_data.at_sea === true;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"The Kracken\", \"type\": \"Pirate Ship\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Replace Boat Type & Length",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 400, name has to be changed\"] = responseCode.code === 400;",
+									"//var new_boat_data = JSON.parse(responseBody);",
+									"//var original_name = postman.getEnvironmentVariable(\"boat_name\");",
+									"//var original_type = postman.getEnvironmentVariable(\"boat_type\");",
+									"//var original_length = postman.getEnvironmentVariable(\"boat_length\");",
+									"//var original_at_sea = postman.getEnvironmentVariable(\"boat_at_sea\");",
+									"//postman.setEnvironmentVariable(\"boat_name\", new_boat_data.name);",
+									"//tests[\"Name has changed, as expected\"] = original_name != new_boat_data.name;",
+									"//tests[\"Type has changed to None, as expected\"] = new_boat_data.type === null;",
+									"//tests[\"Length has changed to None, as expected\"] = new_boat_data.length === null;",
+									"//tests[\"At Sea has not changed\"] = original_at_sea === new_boat_data.at_sea;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"type\": \"Jolly Rodgers\", \"length\": 200}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Replace Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ReplaceSlip",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Slip to Replace",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_id\", slip_data.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 32}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Original Slip Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_number\", slip_data.number);",
+									"postman.setEnvironmentVariable(\"slip_current_boat\", slip_data.current_boat);",
+									"postman.setEnvironmentVariable(\"boat_arrival_date\", slip_data.arrival_date);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Replace Slip Number Only",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var new_slip_data = JSON.parse(responseBody);",
+									"var original_number = postman.getEnvironmentVariable(\"slip_number\");",
+									"//var original_current_boat = postman.getEnvironmentVariable(\"slip_current_boat\");",
+									"//var original_arrival_date = postman.getEnvironmentVariable(\"boat_arrival_date\");",
+									"postman.setEnvironmentVariable(\"slip_number\", new_slip_data.number);",
+									"tests[\"Number has changed as expected\"] = original_number !== new_slip_data.number;",
+									"tests[\"Current Boat is null, as expected\"] = new_slip_data.current_boat === null;",
+									"tests[\"Arrival Date is null, as expected\"] = new_slip_data.arrival_date === null;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 13}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Replace Slip Number & Current Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var new_slip_data = JSON.parse(responseBody);",
+									"var original_number = postman.getEnvironmentVariable(\"slip_number\");",
+									"var original_current_boat = postman.getEnvironmentVariable(\"slip_current_boat\");",
+									"//var original_arrival_date = postman.getEnvironmentVariable(\"boat_arrival_date\");",
+									"postman.setEnvironmentVariable(\"slip_number\", new_slip_data.number);",
+									"postman.setEnvironmentVariable(\"slip_current_boat\", new_slip_data.current_boat);",
+									"tests[\"Number has changed as expected\"] = original_number !== new_slip_data.number;",
+									"tests[\"Current Boat has changed as expected\"] = original_current_boat !== new_slip_data.current_boat;",
+									"tests[\"Arrival Date is null, as expected\"] = new_slip_data.arrival_date === null;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 13, \"current_boat\": \"new_boat_id\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Replace Slip Boat & Arrival",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 400, Did not include required field\"] = responseCode.code === 400;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"current_boat\": \"The red wave\", \"arrival_date\":\"12/20/13\" }"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Replaced SLip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ViewBoat",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Boat to View",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_id\", data.id);",
+									"    ",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"View Boat\", \"type\":\"View Type\", \"length\":121}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Boat Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var boat_data = JSON.parse(responseBody);",
+									"tests[\"Body matches name\"] = responseBody.has(\"View Boat\");",
+									"tests[\"Body matches type\"] = responseBody.has(\"View Type\");",
+									"tests[\"Body matches length\"] = boat_data.length === 121; ",
+									"var boatID = postman.getEnvironmentVariable(\"boat_id\");",
+									"tests[\"Boat id is correct\"] = boatID == boat_data.id;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ViewBoatInSlip",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Slip for Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_id\", slip_data.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 121}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Boat for Slip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_id\", data.id);",
+									"    ",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Boat in Slip\", \"type\":\"Slip Boat\", \"length\":9}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Place Boat in Slip",
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}/boat",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"boat_id\": \"{{boat_id}}\", \"arrival_date\": \"12/25/2015\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "View Boat in Slip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"var boatid = postman.getEnvironmentVariable(\"boat_id\");",
+									"tests[\"Boat is correct and in slip\"] = data.id === boatid;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}/boat",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Boat copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ViewBoatList",
+			"description": "",
+			"item": [
+				{
+					"name": "View List of Boats",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var boat_data = JSON.parse(responseBody);",
+									"var moreThanOne = false;",
+									"if (boat_data.length > 1)",
+									"    moreThanOne = true;",
+									"tests[\"Boat Data Returned more than 1 item\"] = moreThanOne === true; "
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boats",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ViewSlip",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Slip to View",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_id\", slip_data.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 21}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Slip Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"tests[\"Slip Number is correct\"] = slip_data.number === 21;",
+									"var slipID = postman.getEnvironmentVariable(\"slip_id\");",
+									"tests[\"Slip id is correct\"] = slipID === slip_data.id;",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Slip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wSetShipArrival",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Boat for Slip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_id\", data.id);",
+									"    ",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Titantic\", \"type\":\"Ocean Liner\", \"length\":200}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Slip for Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_id\", slip_data.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 52}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check if Boat at_sea before",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var boat_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_name\", boat_data.name);",
+									"postman.setEnvironmentVariable(\"boat_type\", boat_data.type);",
+									"postman.setEnvironmentVariable(\"boat_length\", boat_data.length);",
+									"postman.setEnvironmentVariable(\"boat_at_sea\", boat_data.at_sea);",
+									"tests[\"Boat is at Sea\"] = boat_data.at_sea === true;",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check Slip for Boat Before",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"tests[\"Slip is currently empty\"] = data.current_boat === null;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Set Arrival",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}/boat",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"boat_id\":\"{{boat_id}}\", \"arrival_date\": \"12/25/2015\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Place Boat in Duplicate Slip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 403, indicating slip is currently filled\"] = responseCode.code === 403;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}/boat",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"boat_id\":\"{{boat_id}}\", \"arrival_date\": \"12/25/2015\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check Slip for Boat After",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"var boatid = postman.getEnvironmentVariable(\"boat_id\");",
+									"tests[\"Slip currently is filled with Boat\"] = data.current_boat === boatid;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check if Boat at_sea After",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var boat_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_name\", boat_data.name);",
+									"postman.setEnvironmentVariable(\"boat_type\", boat_data.type);",
+									"postman.setEnvironmentVariable(\"boat_length\", boat_data.length);",
+									"postman.setEnvironmentVariable(\"boat_at_sea\", boat_data.at_sea);",
+									"tests[\"Boat is no longer at sea\"] = boat_data.at_sea === false;",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "xSetBoatDeparture",
+			"description": "",
+			"item": [
+				{
+					"name": "Check for Boat in Slip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"var boatid = postman.getEnvironmentVariable(\"boat_id\");",
+									"tests[\"Single boat info is returned\"] = data.id === boatid;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}/boat",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Set Boat Departure",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"tests[\"Slip returned as empty\"] = data.current_boat === null; "
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}/boat",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/javascript",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check for Boat in Slip Post Departure",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"tests[\"Body matches string\"] = responseBody.has(\"Slip is currently empty\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}/boat",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check to Sea if Boat at_sea",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var boat_data = JSON.parse(responseBody);",
+									"",
+									"tests[\"Boat changed to At Sea\"] = boat_data.at_sea === true;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Slip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "yDeleteBoat",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_id\", data.id);",
+									"    ",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"The Black Pearl\", \"type\":\"Sparrow's Ship\", \"length\":100}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Slip for Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_id\", slip_data.id);"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 13}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Boat Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"var count = data.length;",
+									"console.log(count);",
+									"postman.setEnvironmentVariable(\"start_count\", count);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boats",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Place Boat in Slip",
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}/boat",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"boat_id\":\"{{boat_id}}\", \"arrival_date\": \"12/25/2015\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check Slip for current_boat copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var slip_data = JSON.parse(responseBody);",
+									"tests[\"Current Boat is now none\"] = slip_data.current_boat === null;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get New Boat Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"var count = data.length;",
+									"console.log(count);",
+									"var start_count = postman.getEnvironmentVariable(\"start_count\");",
+									"var expected_count = parseInt(start_count) - 1;",
+									"console.log(expected_count);",
+									"tests[\"Count of boats decreased by 1\"] = expected_count === count;",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boats",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "yDeleteSlip",
+			"description": "",
+			"item": [
+				{
+					"name": "Add Slip for Boat",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"slip_id\", data.id);",
+									"    ",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"number\": 200}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add Boat for Slip",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"boat_id\", data.id);",
+									"    ",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Mordor\", \"type\":\"Ring\", \"length\":1000000000}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Slip Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"var count = data.length;",
+									"console.log(count);",
+									"postman.setEnvironmentVariable(\"start_count\", count);",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slips",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Slip Ship Arrival",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var new_slip_data = JSON.parse(responseBody);",
+									"var boatid = postman.getEnvironmentVariable(\"boat_id\");",
+									"tests[\"Slip now has boat\"] = boatid === new_slip_data.current_boat;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}/boat",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"boat_id\": \"{{boat_id}}\", \"arrival_date\": \"12/25/2015\"}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check if Boat at_sea",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var boat_data = JSON.parse(responseBody);",
+									"tests[\"Boat is no longer at sea\"] = boat_data.at_sea === false;",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Slip copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slip/{{slip_id}}",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get New Slip Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var data = JSON.parse(responseBody);",
+									"var count = data.length;",
+									"console.log(count);",
+									"var start_count = postman.getEnvironmentVariable(\"start_count\");",
+									"var expected_count = parseInt(start_count) - 1;",
+									"console.log(expected_count);",
+									"tests[\"Count of slips decreased by 1\"] = expected_count == count;",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/slips",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Check if Boat at_sea After Deletion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"var boat_data = JSON.parse(responseBody);",
+									"tests[\"Boat is no longer at sea\"] = boat_data.at_sea === true;",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "http://restfulmarina.appspot.com/boat/{{boat_id}}",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

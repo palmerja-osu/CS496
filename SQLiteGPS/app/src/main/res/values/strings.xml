@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SQLiteGPS</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="word">Desired Word</string>
+    <string name="inputText">Write Desired Message Here</string>
+    <string name="getInput">Save Input</string>
+</resources>

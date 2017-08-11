@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="horizontal" >
+    <EditText
+        android:id="@+id/addField"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:rotation="-90"
+        android:textSize="15dp"
+        android:hint="@string/add_number_horizontal_1"/>
+    <TextView
+        android:id="@+id/addTextHoriz"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:textSize="20dp"></TextView>
+    <Button
+        android:id="@+id/btnChangeNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="10dp"
+        android:text="@string/change_number_button"/>
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="10dp"
+        android:text="@string/close" />
+</LinearLayout>

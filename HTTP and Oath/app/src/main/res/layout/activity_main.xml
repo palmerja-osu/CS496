@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.oauth.georgew.oauthapp.MainActivity"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="8dp"
+    tools:layout_editor_absoluteX="8dp">
+    <EditText
+        android:id="@+id/goog_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:hint="@string/write_post"/>
+    <Button
+        android:id="@+id/post_to_google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/post_to_goog"
+        android:textAlignment="center" />
+    <Button
+        android:id="@+id/get_posts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/get_posts"
+        android:textAlignment="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="@string/post_text"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/debug_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"/>
+    <ListView
+        android:id="@+id/post_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+</LinearLayout>
